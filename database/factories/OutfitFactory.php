@@ -16,16 +16,9 @@ class OutfitFactory extends Factory
      */
     public function definition(): array
     {
-        // return [
-        //     'name' => $this->faker->name(),
-        //     'description' => $this->faker->text(),
-        //     'image_url' => $this->faker->imageUrl(),
-        //     'user_id' => $this->faker->numberBetween(1, 10),
-        //     'color' => $this->faker->randomElement(['red', 'green', 'blue']),
-        // ];
 
         return [
-            'type' => $this->faker->randomElement(['Casual', 'Formal', 'Sport', 'Traditional']),
+            'type' => $this->faker->randomElement(['Top', 'Bottom', 'Shoe']),
             'image_url' => $this->faker->imageUrl(640, 480, 'fashion', true),
             'user_id' => $this->faker->numberBetween(1,2), 
             'color' => $this->faker->safeColorName(),

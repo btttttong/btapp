@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Combination;
 use App\Models\Occasion;
 use App\Models\Outfit;
 use App\Models\User;
@@ -29,6 +30,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Outfit::factory(10)->create();
+
+        Combination::factory(10)->create();
 
         // Occasion::factory(2)->create();
 

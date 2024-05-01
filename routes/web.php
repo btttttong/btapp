@@ -1,14 +1,13 @@
 <?php
 
+use App\Http\Controllers\outfitCombination;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // PUBLIC routes
 
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [outfitCombination::class, 'index']);
 
 Route::get('articles', function () {
     return view('articles');

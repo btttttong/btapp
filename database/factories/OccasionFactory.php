@@ -17,7 +17,7 @@ class OccasionFactory extends Factory
     public function definition(): array
     {
         return [
-            'description' => $this->faker->randomElement(['top', 'green', 'blue']),
+            // 'description' => $this->faker->randomElement(['top', 'green', 'blue']),
 
         ];
     }
