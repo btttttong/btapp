@@ -3,8 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// PUBLIC routes
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('articles', function () {
+    return view('articles');
 });
 
 Route::get('/dashboard', function () {

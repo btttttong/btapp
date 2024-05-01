@@ -15,10 +15,16 @@ class navigation extends Component
     public function __construct()
     {
         $this->menu = [
-            ['name' => 'Home', 'url' => '/'],
-            ['name' => 'Articles', 'url' => '/articles'],
-            ['name' => 'Writers', 'url' => '/authors'],
-            ['name' => 'Contact', 'url' => '/contact'],
+            ['name' => 'Lucky charm 💅🏻', 'url' => '/'],
+            ['name' => 'CARD of the day 💳', 'url' => '/articles'],
+            ['name' => 'TRYOUT 🪞', 'url' => '/tryout'],
+            ['name' => 'Promotions 💵', 'url' => '/promo'],
+        ];
+
+        $this->rightmenu = [
+            ['name' => 'Your Profile', 'url' => '/profile'],
+            ['name' => 'Settings', 'url' => '/setting'],
+            ['name' => 'Sign out', 'url' => '/logout'],
         ];
     }
 
