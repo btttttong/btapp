@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('occasion', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('description');
+            $table->string('event_name');
+            $table->string('emoji');
         });
     }
 
