@@ -9,6 +9,8 @@ use Illuminate\View\Component;
 class navigation extends Component
 {
     public $menu = [];
+    public $rightmenu = [];
+
 
     public function __construct()
     {
@@ -21,8 +23,8 @@ class navigation extends Component
         ];
 
         $this->rightmenu = [
-            ['name' => 'Your Profile', 'url' => '/profile'],
-            ['name' => 'Settings', 'url' => '/setting'],
+            // ['name' => 'Your Profile', 'url' => '/profile'],
+            // ['name' => 'Settings', 'url' => '/setting'],
             ['name' => 'Sign out', 'url' => '/logout'],
         ];
     }
