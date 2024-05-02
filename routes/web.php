@@ -23,7 +23,19 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    //outfit
     Route::get('/outfitmanagement', [OutfitManagementController::class, 'index'])->name('outfits.index');
+    Route::get('/outfitmanagement/edit/{id}', [OutfitManagementController::class, 'edit'])->name('outfits.edit');
+    Route::post('/outfitmanagement/update/{id}', [OutfitManagementController::class, 'update'])->name('outfits.update');
+    Route::delete('/outfitmanagement/delete/{id}', [OutfitManagementController::class, 'destroy'])->name('outfits.destroy');
+
+    //color
+    
+
+    //occasion
+
+    
+    //profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

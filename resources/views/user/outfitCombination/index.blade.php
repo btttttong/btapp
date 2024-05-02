@@ -1,15 +1,9 @@
 
 @extends('components.layout')
 
-@section('title', 'welcommme')
+@section('title', 'Lucky charm 💅🏻')
 
 @section('content')
-
-    <h1>Today's date is: {{ date('l') }} </h1>
-    <p> {{ date('Y-m-d') }} </p>
-    <p> color for today is: {{$outfit->top->color}}</p>
-
-
 
 <div class="bg-gray-100">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
