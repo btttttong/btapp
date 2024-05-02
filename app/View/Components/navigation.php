@@ -9,16 +9,14 @@ use Illuminate\View\Component;
 class navigation extends Component
 {
     public $menu = [];
-    /**
-     * Create a new component instance.
-     */
+
     public function __construct()
     {
         $this->menu = [
             ['name' => 'Lucky charm 💅🏻', 'url' => '/'],
-            ['name' => 'CARD of the day 💳', 'url' => '/articles'],
-            ['name' => 'TRYOUT 🪞', 'url' => '/tryout'],
-            ['name' => 'Promotions 💵', 'url' => '/promo'],
+            ['name' => 'Card of the day 🔮', 'url' => '/card'],
+            // ['name' => 'TRYOUT 🪞', 'url' => '/tryout'],
+            // ['name' => 'Promotions 💵', 'url' => '/promo'],
             ['name' => 'login', 'url' => '/login'],
         ];
 

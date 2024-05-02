@@ -1,11 +1,9 @@
 @extends('components.layout')
 
-@section('title', 'card of the day')
+@section('title', 'Card of the day 🔮')
 
 
 @section('content')
-  <h1>Today's date is: {{ date('l') }} </h1>
-    <p> {{ date('Y-m-d') }} </p>
 
     <div class="bg-gray-100">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
