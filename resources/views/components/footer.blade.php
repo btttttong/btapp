@@ -1,5 +1,5 @@
 <footer class="bg-white">
-    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-8 lg:px-8">
         
         <div class="mt-10 flex justify-center space-x-10">
             

@@ -23,24 +23,30 @@
 
 </head>
 <body class="h-full">
-<div class="min-h-full">
+    <div class="min-h-full">
 
-    <x-navigation/>
+        <x-navigation/>
 
-    <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">@yield('title')</h1>
-        </div>
-    </header>
+        <header class="bg-indigo-900 text-white shadow">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold tracking-tight text-white-900">@yield('title')</h1>
+                <h2>Today is: {{ date('l') }} : {{ date('Y-m-d') }} </h2>
+            </div>
+        </header>
 
-    <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            @yield('content')
-        </div>
-    </main>
-</div>
+        <main>
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                @yield('content')
+                
+            </div>
+        </main>
 
-<x-footer/>
+        {{-- @yield('scripts') --}}
+
+
+    </div>
+
+    <x-footer/>
 
 
 </body>
