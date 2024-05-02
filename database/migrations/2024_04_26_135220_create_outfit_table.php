@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('outfit', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('type');
+            $table->foreignId('type_id');
             $table->string('image_url');
             $table->foreignId('user_id');
-            $table->string('color');
+            $table->foreignId('color_id');
             $table->foreignId('ocation_id');
         });
     }

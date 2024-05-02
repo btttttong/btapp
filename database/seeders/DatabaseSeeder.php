@@ -36,7 +36,15 @@ class DatabaseSeeder extends Seeder
 
         // Occasion::factory(2)->create();
 
-        Category::factory(2)->create();
+        $Categorys = [
+            ['category_name' => 'Top'],
+            ['category_name' => 'Bottom'],
+            ['category_name' => 'Shoe'],
+        ];
+
+        foreach ($Categorys as $Category) {
+            Category::create($Category);
+        }
 
         $events = [
             ['event_name' => 'Work', 'emoji' => '💼'],

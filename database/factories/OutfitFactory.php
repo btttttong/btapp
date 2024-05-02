@@ -18,10 +18,10 @@ class OutfitFactory extends Factory
     {
 
         return [
-            'type' => $this->faker->randomElement(['Top', 'Bottom', 'Shoe']),
+            'type_id' => $this->faker->numberBetween(1, 3),
             'image_url' => $this->faker->imageUrl(640, 480, 'fashion', true),
             'user_id' => $this->faker->numberBetween(1,2), 
-            'color' => $this->faker->safeColorName(),
+            'color_id' => $this->faker->numberBetween(1, 15),
             'ocation_id' => $this->faker->numberBetween(1, 7),
         ];
     }
