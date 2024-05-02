@@ -33,5 +33,8 @@
         </li>
     </ul>
     @endforeach
+
+    {{ $outfits->links() }}
+
 </div>  
 @endsection
