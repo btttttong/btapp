@@ -11,7 +11,4 @@ class Occasion extends Model
 
     protected $table = 'occasion';
 
-    public function outfits(){
-        return $this->belongsToMany(Outfit::class);
-    }
 }

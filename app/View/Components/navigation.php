@@ -19,6 +19,7 @@ class navigation extends Component
             ['name' => 'CARD of the day 💳', 'url' => '/articles'],
             ['name' => 'TRYOUT 🪞', 'url' => '/tryout'],
             ['name' => 'Promotions 💵', 'url' => '/promo'],
+            ['name' => 'login', 'url' => '/login'],
         ];
 
         $this->rightmenu = [
