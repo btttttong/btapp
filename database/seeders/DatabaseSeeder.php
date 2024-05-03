@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        Outfit::factory(10)->create();
+        Outfit::factory(1000)->create();
 
         Combination::factory(10)->create();
 
@@ -134,9 +134,123 @@ class DatabaseSeeder extends Seeder
             ['card_number' => 'XXI', 'card_name' => 'The World', 'meaning' => 'Completion, achievement, fulfillment, successful conclusion, wholeness.', 'image_path' => 'images/tarot/XXI.jpg']
         ];
         
-        
         foreach ($cards as $card) {
             Card::create($card);
+        }
+
+
+        $entries = [
+            // Monday
+            ['day_id' => 1, 'aspect_id' => 1, 'color_id' => 1], // Money, Purple
+            ['day_id' => 1, 'aspect_id' => 1, 'color_id' => 2], // Money, Yellow
+            ['day_id' => 1, 'aspect_id' => 1, 'color_id' => 3], // Money, Orange
+            ['day_id' => 1, 'aspect_id' => 2, 'color_id' => 2], // Work, Yellow
+            ['day_id' => 1, 'aspect_id' => 2, 'color_id' => 4], // Work, Light green
+            ['day_id' => 1, 'aspect_id' => 2, 'color_id' => 5], // Work, Light Blue
+            ['day_id' => 1, 'aspect_id' => 3, 'color_id' => 1], // Love, Purple
+            ['day_id' => 1, 'aspect_id' => 3, 'color_id' => 9], // Love, Blue
+            ['day_id' => 1, 'aspect_id' => 3, 'color_id' => 6], // Love, Pink
+            ['day_id' => 1, 'aspect_id' => 4, 'color_id' => 8], // Influence, Green
+            ['day_id' => 1, 'aspect_id' => 5, 'color_id' => 6], // Health, Pink
+            ['day_id' => 1, 'aspect_id' => 5, 'color_id' => 15], // Health, Sky Blue
+            ['day_id' => 1, 'aspect_id' => 6, 'color_id' => 8], // Bad, Red
+        
+            // Tuesday
+            ['day_id' => 2, 'aspect_id' => 1, 'color_id' => 8], // Money, Red
+            ['day_id' => 2, 'aspect_id' => 1, 'color_id' => 3], // Money, Orange
+            ['day_id' => 2, 'aspect_id' => 2, 'color_id' => 1], // Work, Purple
+            ['day_id' => 2, 'aspect_id' => 2, 'color_id' => 9], // Work, Blue
+            ['day_id' => 2, 'aspect_id' => 2, 'color_id' => 3], // Work, Orange
+            ['day_id' => 2, 'aspect_id' => 3, 'color_id' => 3], // Love, Orange
+            ['day_id' => 2, 'aspect_id' => 3, 'color_id' => 2], // Love, Yellow
+            ['day_id' => 2, 'aspect_id' => 3, 'color_id' => 8], // Love, Red
+            ['day_id' => 2, 'aspect_id' => 4, 'color_id' => 1], // Influence, Purple
+            ['day_id' => 2, 'aspect_id' => 5, 'color_id' => 8], // Health, Green
+            ['day_id' => 2, 'aspect_id' => 6, 'color_id' => 14], // Bad, White
+        
+            // Wednesday
+            ['day_id' => 3, 'aspect_id' => 1, 'color_id' => 11], // Money, Brown
+            ['day_id' => 3, 'aspect_id' => 1, 'color_id' => 12], // Money, Cream
+            ['day_id' => 3, 'aspect_id' => 2, 'color_id' => 11], // Work, Brown
+            ['day_id' => 3, 'aspect_id' => 2, 'color_id' => 8], // Work, Orange
+            ['day_id' => 3, 'aspect_id' => 3, 'color_id' => 13], // Love, Black
+            ['day_id' => 3, 'aspect_id' => 3, 'color_id' => 13], // Love, Gray
+            ['day_id' => 3, 'aspect_id' => 3, 'color_id' => 12], // Love, Cream
+            ['day_id' => 3, 'aspect_id' => 4, 'color_id' => 8], // Influence, Orange
+            ['day_id' => 3, 'aspect_id' => 5, 'color_id' => 9], // Health, Blue
+            ['day_id' => 3, 'aspect_id' => 5, 'color_id' => 5], // Health, Light Blue
+            ['day_id' => 3, 'aspect_id' => 5, 'color_id' => 1], // Health, Purple
+            ['day_id' => 3, 'aspect_id' => 6, 'color_id' => 6], // Bad, Pink
+        
+            // Thursday
+            ['day_id' => 4, 'aspect_id' => 1, 'color_id' => 8],  // Money, Red
+            ['day_id' => 4, 'aspect_id' => 1, 'color_id' => 2],  // Money, Yellow
+            ['day_id' => 4, 'aspect_id' => 1, 'color_id' => 10], // Money, Gold
+            ['day_id' => 4, 'aspect_id' => 2, 'color_id' => 9],  // Work, Blue
+            ['day_id' => 4, 'aspect_id' => 2, 'color_id' => 5],  // Work, Light Blue
+            ['day_id' => 4, 'aspect_id' => 2, 'color_id' => 7],  // Work, Green
+            ['day_id' => 4, 'aspect_id' => 3, 'color_id' => 8],  // Love, Red
+            ['day_id' => 4, 'aspect_id' => 3, 'color_id' => 3],  // Love, Orange
+            ['day_id' => 4, 'aspect_id' => 3, 'color_id' => 14], // Love, White
+            ['day_id' => 4, 'aspect_id' => 4, 'color_id' => 9],  // Influence, Blue
+            ['day_id' => 4, 'aspect_id' => 4, 'color_id' => 5],  // Influence, Light Blue
+            ['day_id' => 4, 'aspect_id' => 5, 'color_id' => 13], // Health, Black
+            ['day_id' => 4, 'aspect_id' => 5, 'color_id' => 13], // Health, Gray
+            ['day_id' => 4, 'aspect_id' => 5, 'color_id' => 9],  // Health, Blue
+            ['day_id' => 4, 'aspect_id' => 6, 'color_id' => 1],  // Bad, Purple
+
+            // Friday
+            ['day_id' => 5, 'aspect_id' => 1, 'color_id' => 6],  // Money, Pink
+            ['day_id' => 5, 'aspect_id' => 1, 'color_id' => 5],  // Money, Light Blue
+            ['day_id' => 5, 'aspect_id' => 1, 'color_id' => 3],  // Money, Orange
+            ['day_id' => 5, 'aspect_id' => 2, 'color_id' => 7],  // Work, Green
+            ['day_id' => 5, 'aspect_id' => 2, 'color_id' => 2],  // Work, Yellow
+            ['day_id' => 5, 'aspect_id' => 2, 'color_id' => 14], // Work, White
+            ['day_id' => 5, 'aspect_id' => 3, 'color_id' => 2],  // Love, Yellow
+            ['day_id' => 5, 'aspect_id' => 3, 'color_id' => 6],  // Love, Pink
+            ['day_id' => 5, 'aspect_id' => 3, 'color_id' => 3],  // Love, Orange
+            ['day_id' => 5, 'aspect_id' => 4, 'color_id' => 2],  // Influence, Yellow
+            ['day_id' => 5, 'aspect_id' => 4, 'color_id' => 14], // Influence, White
+            ['day_id' => 5, 'aspect_id' => 5, 'color_id' => 8],  // Health, Red
+            ['day_id' => 5, 'aspect_id' => 6, 'color_id' => 13], // Bad, Black
+
+            // Saturday
+            ['day_id' => 6, 'aspect_id' => 1, 'color_id' => 9],  // Money, Blue
+            ['day_id' => 6, 'aspect_id' => 1, 'color_id' => 5],  // Money, Light Blue
+            ['day_id' => 6, 'aspect_id' => 1, 'color_id' => 8],  // Money, Red
+            ['day_id' => 6, 'aspect_id' => 2, 'color_id' => 13], // Work, Black
+            ['day_id' => 6, 'aspect_id' => 2, 'color_id' => 13], // Work, Gray
+            ['day_id' => 6, 'aspect_id' => 2, 'color_id' => 5],  // Work, Light Blue
+            ['day_id' => 6, 'aspect_id' => 3, 'color_id' => 6],  // Love, Pink
+            ['day_id' => 6, 'aspect_id' => 3, 'color_id' => 5],  // Love, Light Blue
+            ['day_id' => 6, 'aspect_id' => 3, 'color_id' => 9],  // Love, Blue
+            ['day_id' => 6, 'aspect_id' => 4, 'color_id' => 13], // Influence, Black
+            ['day_id' => 6, 'aspect_id' => 4, 'color_id' => 11], // Influence, Brown
+            ['day_id' => 6, 'aspect_id' => 5, 'color_id' => 8],  // Health, Orange
+            ['day_id' => 6, 'aspect_id' => 5, 'color_id' => 2],  // Health, Yellow
+            ['day_id' => 6, 'aspect_id' => 5, 'color_id' => 12], // Health, Cream
+            ['day_id' => 6, 'aspect_id' => 6, 'color_id' => 7],  // Bad, Green
+
+            // Sunday
+            ['day_id' => 7, 'aspect_id' => 1, 'color_id' => 7],  // Money, Green
+            ['day_id' => 7, 'aspect_id' => 1, 'color_id' => 13], // Money, Black
+            ['day_id' => 7, 'aspect_id' => 1, 'color_id' => 1],  // Money, Purple
+            ['day_id' => 7, 'aspect_id' => 2, 'color_id' => 6],  // Work, Pink
+            ['day_id' => 7, 'aspect_id' => 2, 'color_id' => 3],  // Work, Orange
+            ['day_id' => 7, 'aspect_id' => 3, 'color_id' => 2],  // Love, Yellow
+            ['day_id' => 7, 'aspect_id' => 3, 'color_id' => 4],  // Love, Light green
+            ['day_id' => 7, 'aspect_id' => 3, 'color_id' => 13], // Love, Black
+            ['day_id' => 7, 'aspect_id' => 4, 'color_id' => 10], // Influence, Gold
+            ['day_id' => 7, 'aspect_id' => 5, 'color_id' => 2],  // Health, Yellow
+            ['day_id' => 7, 'aspect_id' => 5, 'color_id' => 14], // Health, White
+            ['day_id' => 7, 'aspect_id' => 5, 'color_id' => 9],  // Health, Blue
+
+            
+        ];
+        
+
+        foreach ($entries as $entrie) {
+            TellerLog::create($entrie);
         }
 
 
