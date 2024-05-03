@@ -28,9 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/outfitmanagement/edit/{id}', [OutfitManagementController::class, 'edit'])->name('outfits.edit');
     Route::post('/outfitmanagement/update/{id}', [OutfitManagementController::class, 'update'])->name('outfits.update');
     Route::delete('/outfitmanagement/delete/{id}', [OutfitManagementController::class, 'destroy'])->name('outfits.destroy');
+    Route::get('/outfitmanagement/create', [OutfitManagementController::class, 'create'])->name('outfits.create');
+    Route::post('/outfitmanagement', [OutfitManagementController::class, 'store'])->name('outfits.store');
+
 
     //color
-    
+
 
     //occasion
 

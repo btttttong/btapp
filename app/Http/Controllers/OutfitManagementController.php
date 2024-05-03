@@ -44,4 +44,29 @@ class OutfitManagementController extends Controller
 
         return redirect('/outfitmanagement')->with('success', 'Outfit deleted successfully');
     }
+
+    public function create()
+    {
+        return view('outfit.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'type' => 'required|integer',
+            'image_url' => 'required|string',
+            'color_id' => 'required|integer',
+            'ocation_id' => 'required|integer',
+        ]);
+
+        $outfit = new Outfit();
+        $outfit->type_id = $request->type;
+        $outfit->image_url = $request->image_url;
+        $outfit->color_id = $request->color_id;
+        $outfit->ocation_id = $request->ocation_id;
+        $outfit->user_id = 1;
+        $outfit->save();
+
+        return redirect()->route('outfits.index')->with('success', 'Outfit created successfully.');
+    }
 }

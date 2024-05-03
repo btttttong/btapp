@@ -3,6 +3,11 @@
 @section('title', 'Outfit Management')
 
 @section('content')
+<a href="/outfitmanagement/create" class="mt-4 block w-48 text-center bg-purple-700 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded">
+    Create new outfit
+</a>
+<br><br>
+
 <div x-data="{
     confirmDelete(id) {
         if (confirm('Are you sure you want to delete this item?')) {
