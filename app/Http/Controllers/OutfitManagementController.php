@@ -10,7 +10,7 @@ class OutfitManagementController extends Controller
 {
     public function index()
     {
-        $outfits = Outfit::paginate(10);
+        $outfits = Outfit::paginate(20);
         
 
         return view('outfit.index', ['outfits' => $outfits]);
