@@ -11,16 +11,21 @@ class Color extends Model
 
     protected $table = 'color';
 
-    public function color(){
-        return $this->belongsToMany(Outfit::class);
-    }
+    public function outfits()
+{
+    return $this->hasMany(Outfit::class, 'color_id');
+}
 
-    public function days() {
-        return $this->belongsToMany(Day::class, 'teller_log', 'color_id', 'day_id');
-    }
+    // public function color(){
+    //     return $this->belongsToMany(Outfit::class);
+    // }
+
+    // public function days() {
+    //     return $this->belongsToMany(Day::class, 'teller_log', 'color_id', 'day_id');
+    // }
     
-    public function aspects() {
-        return $this->belongsToMany(Aspect::class, 'teller_log', 'color_id', 'aspect_id');
-    }
+    // public function aspects() {
+    //     return $this->belongsToMany(Aspect::class, 'teller_log', 'color_id', 'aspect_id');
+    // }
     
 }

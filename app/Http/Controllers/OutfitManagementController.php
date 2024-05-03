@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Outfit;
+use App\Models\Color;
+use App\Models\Occasion;
 
 class OutfitManagementController extends Controller
 {
@@ -18,7 +20,10 @@ class OutfitManagementController extends Controller
 
     public function edit($id){
         $outfit = Outfit::find($id);
-        return view('outfit.edit', ['outfit'=> $outfit]);
+        $colors = Color::all();
+        $occasions = Occasion::all();
+
+        return view('outfit.edit', compact('outfit', 'colors', 'occasions'));
     }
 
 
@@ -27,8 +32,8 @@ class OutfitManagementController extends Controller
         // get data from request
         $outfit = Outfit::find($id);
 
-        $outfit->color = $request->color;
-        $outfit->type = $request->type;
+        $outfit->color_id = $request->color_id;
+        $outfit->type_id = $request->type;
         $outfit->ocation_id = $request->ocation_id;
         $outfit->image_url = $request->image_url;
 

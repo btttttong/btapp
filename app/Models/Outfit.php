@@ -15,5 +15,10 @@ class Outfit extends Model
         return $this->belongsToMany(Occasion::class);
     }
 
+    public function color()
+{
+    return $this->belongsTo(Color::class, 'color_id');
+}
+
 
 }

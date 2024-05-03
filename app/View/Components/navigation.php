@@ -20,7 +20,7 @@ class navigation extends Component
             // ['name' => 'TRYOUT 🪞', 'url' => '/tryout'],
             // ['name' => 'Promotions 💵', 'url' => '/promo'],
             // ['name' => 'login', 'url' => '/login'],
-            ['name' => 'outfit management', 'url' => '/outfitmanagement'],
+            ['name' => 'outfit management 🔧', 'url' => '/outfitmanagement'],
         ];
 
         $this->rightmenu = [
