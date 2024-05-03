@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\Outfit;
 use App\Models\Color;
 use App\Models\Occasion;
+use App\Models\Category;
 
 class OutfitManagementController extends Controller
 {
@@ -52,7 +53,10 @@ class OutfitManagementController extends Controller
 
     public function create()
     {
-        return view('outfit.create');
+        $colors = Color::all();
+        $occasions = Occasion::all();
+        $types = Category::all();
+        return view('outfit.create', compact('colors', 'occasions', 'types'));
     }
 
     public function store(Request $request)
