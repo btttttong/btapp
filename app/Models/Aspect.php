@@ -11,13 +11,13 @@ class Aspect extends Model
 
     protected $table = 'aspect';
 
-    public function days() {
-        return $this->belongsToMany(Day::class, 'teller_log', 'aspect_id', 'day_id');
-    }
+    // public function days() {
+    //     return $this->belongsToMany(Day::class, 'teller_log', 'aspect_id', 'day_id');
+    // }
     
-    public function colors() {
-        return $this->belongsToMany(Color::class, 'teller_log', 'aspect_id', 'color_id');
-    }
+    // public function colors() {
+    //     return $this->belongsToMany(Color::class, 'teller_log', 'aspect_id', 'color_id');
+    // }
     
     
 }
